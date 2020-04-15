@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "cf78aa28-e247-4942-914a-b1be94fa972e",
+		"name": "KeyValue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Key Pair",
+			"item": [
+				{
+					"name": "KeyValue list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 46a56c47d1727c4d82bfd1546be1822d4623f403",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/keyvalue-pair/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"keyvalue-pair",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KeyFile list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 46a56c47d1727c4d82bfd1546be1822d4623f403",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/keyfile-pair/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"keyfile-pair",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KeyFile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 46a56c47d1727c4d82bfd1546be1822d4623f403",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/keyfile-pair/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"keyfile-pair",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KeyValue create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 46a56c47d1727c4d82bfd1546be1822d4623f403",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"gg\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/keyvalue-pair/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"keyvalue-pair",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KeyFile create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "token 46a56c47d1727c4d82bfd1546be1822d4623f403"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "key",
+									"type": "file",
+									"src": "/home/zfcon/Desktop/random_pic/sample.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/keyfile-pair/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"keyfile-pair",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "KeyValue",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "token 46a56c47d1727c4d82bfd1546be1822d4623f403",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/keyvalue-pair/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"keyvalue-pair",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"zfcongg\",\n    \"password\": \"123456789\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "csrf",
+						"value": "f9DtR3YIjdhUC6MVVdQwuhMociC56cVoTITlCkjZiDvwWXR1L1EiUJvLbIJyYWVl",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"ziad\",\n\t\"last_name\": \"ahmed\",\n    \"username\": \"zfcongg\",\n    \"password\": \"123456789\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sign-up/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sign-up",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
