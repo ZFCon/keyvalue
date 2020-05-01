@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Installed Apps
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_swagger',
 
     # My Apps
     'keyvalue_app',
@@ -51,6 +52,17 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },
 }
 
 MIDDLEWARE = [
